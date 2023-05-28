@@ -7,7 +7,7 @@ import java.nio.file.Paths;
 import org.apache.poi.xssf.usermodel.*;
 
 public class userDataExcel {
-    private final String DEFAULT_PATH = "C:\\Users\\User\\Documents\\Excel";
+    private final String DEFAULT_PATH;
     private final String userDataPath;
 
     private XSSFWorkbook workbook;
@@ -24,6 +24,7 @@ public class userDataExcel {
     }
     public userDataExcel(String userDataPath) throws Exception{
         this.userDataPath = userDataPath;
+        DEFAULT_PATH = userDataPath.substring(0, userDataPath.lastIndexOf('\\')) + "\\Excel";
         if(!Files.exists(Paths.get(userDataPath))){
             workbook = new XSSFWorkbook();
             sheet = workbook.createSheet("userData");
