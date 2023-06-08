@@ -8,3 +8,5 @@ execute: java -cp .;lib/commons-collections4-4.4.jar;lib/poi-4.1.2.jar;lib/poi-o
 
 # To use(.jar)
 run 第4組_理財小工具_Java2023.jar
+
+java -jar 第4組_理財小工具_Java2023.jar
